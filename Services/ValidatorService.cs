@@ -2,9 +2,9 @@
 
 namespace SmartDevApp.Services
 {
-    public class EmailService : IEmailService
+    public class ValidatorService : IValidatorService
     {
-        public void SendWelcomeEmail()
+        public void ValidateUser()
         {
             throw new NotImplementedException();
         }

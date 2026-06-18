@@ -2,9 +2,9 @@
 
 namespace SmartDevApp.Services
 {
-    public class EmailService : IEmailService
+    public class LoggerService : ILoggerService
     {
-        public void SendWelcomeEmail()
+        public void Log()
         {
             throw new NotImplementedException();
         }

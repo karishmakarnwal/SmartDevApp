@@ -1,19 +1,30 @@
 ﻿using SmartDevApp.Interface;
+using System.ComponentModel.DataAnnotations;
 
 namespace SmartDevApp.Services
 {
     public class UserService
     {
-        public readonly IEmailService _emailService;
+        private readonly IEmailService _emailService;
+        private readonly IValidatorService _validatorService;
+        private readonly ILoggerService _loggerService;
 
-        public UserService(IEmailService emailService)
+        public UserService(IEmailService emailService,
+            IValidatorService validatorService,
+            ILoggerService loggerService)
         {
-            _emailService = emailService; 
+            _emailService = emailService;
+            _validatorService = validatorService;
+            _loggerService = loggerService; 
         }
 
-        public void SendEmailToUser()
+        public void RegisterUser()
         {
-            _emailService.SendEmail();
+            _validatorService.ValidateUser();
+
+            // Save User
+
+            _emailService.SendWelcomeEmail();
         }
     }
 }
