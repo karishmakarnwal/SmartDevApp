@@ -2,11 +2,16 @@
 
 namespace SmartDevApp.Services
 {
-    public class EmailService : IEmailService
+    public class EmailService : IEmailService, INotificationService
     {
+        public void Send()
+        {
+            Console.WriteLine("Sending Email");
+        }
+
         public void SendWelcomeEmail()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Sending Welcome Email");
         }
     }
 }
