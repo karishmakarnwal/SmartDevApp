@@ -6,8 +6,6 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 
-builder.Services.AddScoped<IEmailService, EmailService>();
-
 builder.Services.AddScoped<INotificationService, EmailService>();
 builder.Services.AddScoped<INotificationService, SMSService>();
 builder.Services.AddScoped<INotificationService, WhatsAppService>();

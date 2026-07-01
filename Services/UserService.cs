@@ -5,17 +5,14 @@ namespace SmartDevApp.Services
 {
     public class UserService
     {
-        private readonly IEmailService _emailService;
         private readonly IValidatorService _validatorService;
         private readonly ILoggerService _loggerService;
         private readonly IEnumerable<INotificationService> _notificationServices;
 
-        public UserService(IEmailService emailService,
-            IValidatorService validatorService,
+        public UserService(IValidatorService validatorService,
             ILoggerService loggerService,
             IEnumerable<INotificationService> notificationServices) // Dear DI Container, Give me ALL the notification services you know about.
         {
-            _emailService = emailService;
             _validatorService = validatorService;
             _loggerService = loggerService;
 
@@ -31,10 +28,6 @@ namespace SmartDevApp.Services
             // Save User
 
             // .......
-
-            // Send Welcome Email
-
-            _emailService.SendWelcomeEmail();
 
             // Send Notifications
 
