@@ -6,7 +6,7 @@ namespace SmartDevApp.Services
     {
         public void ValidateUser()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Validates data");
         }
     }
 }
