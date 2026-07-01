@@ -11,6 +11,7 @@ builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddScoped<INotificationService, EmailService>();
 builder.Services.AddScoped<INotificationService, SMSService>();
 builder.Services.AddScoped<INotificationService, WhatsAppService>();
+builder.Services.AddScoped<INotificationService, TelegramService>();
 
 var app = builder.Build();
 

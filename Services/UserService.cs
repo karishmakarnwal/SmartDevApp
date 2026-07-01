@@ -40,6 +40,7 @@ namespace SmartDevApp.Services
 
             foreach (var notification in _notificationServices) {
                 notification.Send();        // send all three email, sms and whatsapp with single line
+                                            // LSP also implemented. added telegram service too but no changes were made to UserService
             }
 
         }

@@ -6,7 +6,7 @@ namespace SmartDevApp.Services
     {
         public void Log()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Logging data");
         }
     }
 }
